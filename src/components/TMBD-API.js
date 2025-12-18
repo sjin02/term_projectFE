@@ -1,12 +1,12 @@
 
-export const URL = 'https://api.themoviedb.org/3/'
+export const URL = 'https://api.themoviedb.org/3/';
 
-export const IMAGE_BASE_URL = 'http://image.tmdb.org/t/p/'
-const KEY = process.env.REACT_APP_TMDB_API_KEY;
+export const IMAGE_BASE_URL = 'http://image.tmdb.org/t/p/';
+const KEY = import.meta.env.VITE_TMDB_API_KEY;
 export const TMBDAPI = {
     fetchMovies: async () => {
         try {
-            const response = await fetch(`${URL}movie/popular?api_key=${KEY}&language=ko-KRpage=1`);
+            const response = await fetch(`${URL}movie/popular?api_key=${KEY}&language=ko-KR&page=1`);
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
@@ -122,7 +122,9 @@ export const TMBDAPI = {
             console.error("Failed to perform TMDB search:", error);
             return [];
         }
-    }
+    },
+
+    getPosterUrl: (path, size = 'w500') => `${IMAGE_BASE_URL}${size}${path}`
 
 
 

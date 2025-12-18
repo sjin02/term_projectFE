@@ -1,14 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
 import Header from "./components/Header";
 import Main from "./components/Main";
-import ReactDOM from "react-dom";
 import Banner from "./components/banner";
 import BestReview from "./components/BestReview";
 import './index.css';
 import Profile from "./components/profile";
 import Vote from "./components/vote";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from "./pages/home";
 import Detail from "./pages/detail";
 import MovieDetail from "./pages/detail";
