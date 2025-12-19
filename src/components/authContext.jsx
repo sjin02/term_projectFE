@@ -7,7 +7,7 @@ export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null); 
     const [isLoggedIn, setIsLoggedIn] = useState(false); // 로그인 여부
 
-    const DEFAULT_IMAGE = '/images/default_profile.png';
+    const DEFAULT_IMAGE = './images/default_profile.png';
 
     // 앱 로드 시 localStorage에서 로그인 정보 불러오기
     useEffect(() => {
